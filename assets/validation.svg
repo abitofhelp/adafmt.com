@@ -1,46 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
-  <title id="title">Adafmt validation pyramid</title>
-  <desc id="desc">A layered validation pyramid showing safety checks, a 51,000 plus Ada file test corpus, ACATS tests, and Ada 2022 feature coverage.</desc>
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adafmt validation dashboard illustration">
   <defs>
-    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#7dd3fc"/>
-      <stop offset="1" stop-color="#c4b5fd"/>
+    <radialGradient id="bg" cx="53%" cy="42%" r="74%">
+      <stop offset="0" stop-color="#12365a"/>
+      <stop offset="0.58" stop-color="#0a1a30"/>
+      <stop offset="1" stop-color="#06101e"/>
+    </radialGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#34d399"/>
     </linearGradient>
-    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#0f172a"/>
-      <stop offset="1" stop-color="#1e293b"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <rect width="560" height="420" rx="28" fill="#0b1120"/>
-  <circle cx="480" cy="70" r="120" fill="#7dd3fc" opacity="0.11"/>
-  <circle cx="90" cy="330" r="130" fill="#c4b5fd" opacity="0.10"/>
-
-  <g filter="url(#shadow)">
-    <path d="M80 332 H480 L420 264 H140 Z" fill="#172033" stroke="#334155"/>
-    <path d="M140 256 H420 L366 198 H194 Z" fill="#1b2841" stroke="#3b4b67"/>
-    <path d="M194 190 H366 L326 142 H234 Z" fill="#20304e" stroke="#4a5b7c"/>
-    <path d="M234 134 H326 L280 76 Z" fill="url(#g1)"/>
+  <rect width="560" height="420" rx="28" fill="url(#bg)"/>
+  <g opacity="0.2">
+    <path d="M40 90H516M40 180H516M40 270H516M40 360H516" stroke="#7dd3fc"/>
+    <path d="M100 42V382M220 42V382M340 42V382M460 42V382" stroke="#7dd3fc"/>
   </g>
 
-  <text x="280" y="116" text-anchor="middle" fill="#07111f" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="900">Ada 2022</text>
-  <text x="280" y="222" text-anchor="middle" fill="#e2e8f0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">Relevant ACATS tests</text>
-  <text x="280" y="286" text-anchor="middle" fill="#e2e8f0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">51,000+ Ada files in the largest test corpus</text>
-  <text x="280" y="316" text-anchor="middle" fill="#b7c4d9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14">real-world open-source Ada corpus</text>
-
-  <g transform="translate(72 56)">
-    <rect width="154" height="48" rx="24" fill="#111827" stroke="#334155"/>
-    <circle cx="24" cy="24" r="8" fill="#a7f3d0"/>
-    <text x="42" y="29" fill="#dbeafe" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">Idempotency</text>
-  </g>
-  <g transform="translate(342 336)">
-    <rect width="148" height="48" rx="24" fill="#111827" stroke="#334155"/>
-    <circle cx="24" cy="24" r="8" fill="#fde68a"/>
-    <text x="42" y="29" fill="#dbeafe" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">Backups</text>
+  <g transform="translate(36 36)">
+    <rect width="216" height="146" rx="22" fill="#0d1c33" stroke="#7dd3fc" stroke-opacity="0.32"/>
+    <text x="26" y="45" font-family="Inter, Arial, sans-serif" font-size="14" fill="#7dd3fc" font-weight="800">LARGEST TEST CORPUS</text>
+    <text x="26" y="94" font-family="Inter, Arial, sans-serif" font-size="42" fill="#f8fafc" font-weight="850">51,000+</text>
+    <text x="26" y="121" font-family="Inter, Arial, sans-serif" font-size="15" fill="#b7c4d9">Ada files</text>
   </g>
 
-  <path d="M280 356 C228 356 190 344 160 318" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
-  <path d="M280 356 C332 356 370 344 400 318" fill="none" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <g transform="translate(302 42)">
+    <circle cx="104" cy="104" r="76" stroke="#143454" stroke-width="20"/>
+    <path d="M104 28a76 76 0 1 1-64 117" stroke="url(#g)" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="104" cy="104" r="46" fill="#07111f" stroke="#7dd3fc" stroke-opacity="0.28"/>
+    <path d="M82 104l16 16 32-42" stroke="#a7f3d0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(36 218)">
+    <rect width="150" height="118" rx="20" fill="#0d1c33" stroke="#34d399" stroke-opacity="0.30"/>
+    <circle cx="34" cy="38" r="14" fill="#34d399" opacity="0.17"/>
+    <path d="M27 38l5 5 10-13" stroke="#a7f3d0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="24" y="78" font-family="Inter, Arial, sans-serif" font-size="18" fill="#f8fafc" font-weight="800">ACATS</text>
+    <text x="24" y="100" font-family="Inter, Arial, sans-serif" font-size="13" fill="#b7c4d9">relevant tests</text>
+  </g>
+
+  <g transform="translate(206 218)">
+    <rect width="150" height="118" rx="20" fill="#0d1c33" stroke="#7dd3fc" stroke-opacity="0.30"/>
+    <rect x="24" y="26" width="78" height="14" rx="7" fill="#7dd3fc" opacity="0.7"/>
+    <text x="24" y="78" font-family="Inter, Arial, sans-serif" font-size="18" fill="#f8fafc" font-weight="800">Ada 2022</text>
+    <text x="24" y="100" font-family="Inter, Arial, sans-serif" font-size="13" fill="#b7c4d9">feature tests</text>
+  </g>
+
+  <g transform="translate(376 218)">
+    <rect width="150" height="118" rx="20" fill="#0d1c33" stroke="#c4b5fd" stroke-opacity="0.32"/>
+    <path d="M24 42h100M24 58h72M24 74h96" stroke="#c4b5fd" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+    <text x="24" y="104" font-family="Inter, Arial, sans-serif" font-size="13" fill="#b7c4d9">real-world corpus</text>
+  </g>
+
+  <g transform="translate(66 360)">
+    <rect width="428" height="28" rx="14" fill="#07111f" stroke="#7dd3fc" stroke-opacity="0.24"/>
+    <rect x="7" y="7" width="280" height="14" rx="7" fill="url(#g)" opacity="0.85" filter="url(#glow)"/>
+    <text x="304" y="19" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe" font-weight="700">benchmarks coming soon</text>
+  </g>
 </svg>

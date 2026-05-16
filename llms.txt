@@ -1,18 +1,18 @@
 # Adafmt™
 
-Adafmt™ is a professional Ada formatter for development teams that want safe, repeatable, configuration-driven formatting across real Ada codebases. The command-line tool is `adafmt`.
+Adafmt™ is a modern, high-performance, safety-oriented Ada formatter for professional software development teams. The command-line tool is `adafmt`.
 
-## Core positioning
+## What Adafmt does
 
-Adafmt is a modern, high-performance, safety-oriented developer tool for Ada formatting. It provides configuration-driven style correction, syntax error detection, automatic backup behavior, and repeatable professional formatting results.
+Adafmt provides configuration-driven style correction, syntax error detection, safe default workflows with automatic backup behavior, and repeatable professional formatting for standard Ada source code, including GNAT Ada workflows and Ada 2022-oriented codebases.
 
-## In the Lab
+## Validation
 
-Adafmt has been validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code. The largest test corpus contains more than 51,000 Ada files. Formatter validation emphasizes format success, idempotency, and stable output after repeated formatting.
+Adafmt is validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code. The largest test corpus contains more than 51,000 Ada files.
 
-## Current release status
+## Release and trial status
 
-Trial builds are planned. Initial targets are Linux x86_64 and Linux AArch64.
+Adafmt v1.0.0 for Linux amd64 and Linux arm64 is planned by June 1, 2026. A Windows 11 release is expected shortly afterwards. macOS is a supported platform, but the macOS release depends on resolving an issue with an external vendor library before packaging can be prepared. Once licensing is enabled, a 14-day trial is planned with an option to subscribe at the end of the trial period.
 
 ## Trademark
 

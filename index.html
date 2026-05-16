@@ -6,7 +6,7 @@
   <title>Adafmt™ — Professional Ada formatting</title>
   <meta name="description" content="Adafmt™ is a modern, high-performance, safety-oriented Ada formatter for professional development teams using standard Ada, GNAT Ada, and Ada 2022 codebases.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#07111f">
   <link rel="canonical" href="https://adafmt.com/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
@@ -14,11 +14,11 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adafmt.com/">
   <meta property="og:title" content="Adafmt™ — Professional Ada formatting">
-  <meta property="og:description" content="Modern, high-performance, safety-oriented Ada formatting with configuration-driven style correction, syntax error detection, and large-scale validation with 51,000+ Ada files in the largest test corpus.">
+  <meta property="og:description" content="Modern Ada formatting with configuration-driven style correction, syntax error detection, safe defaults, and project-scale validation with 51,000+ Ada files in the largest test corpus.">
   <meta property="og:image" content="https://adafmt.com/assets/hero.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Adafmt™ — Professional Ada formatting">
-  <meta name="twitter:description" content="Professional Ada formatting for real codebases, including Ada 2022-oriented workflows and 51,000+ Ada files in the largest test corpus.">
+  <meta name="twitter:description" content="Professional Ada formatting for GNAT Ada teams and modern Ada codebases, including Ada 2022-oriented workflows.">
   <meta name="twitter:image" content="https://adafmt.com/assets/hero.svg">
 
   <script type="application/ld+json">
@@ -37,13 +37,13 @@
         "name": "Adafmt",
         "alternateName": "adafmt",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Linux",
+        "operatingSystem": "Linux amd64 and Linux arm64; Windows 11 expected shortly afterwards; macOS supported",
         "url": "https://adafmt.com/",
-        "description": "Adafmt is a modern, high-performance, safety-oriented Ada formatter for professional development teams. It provides configuration-driven style correction, syntax error detection, and repeatable professional formatting for standard Ada codebases, including Ada 2022-oriented workflows and large-scale validation with more than 51,000 Ada files in the largest test corpus.",
+        "description": "Adafmt is a modern, high-performance, safety-oriented Ada formatter for professional development teams. It provides configuration-driven style correction, syntax error detection, safe default workflows, and repeatable professional formatting for standard Ada codebases, including Ada 2022-oriented workflows.",
         "publisher": { "@id": "https://adafmt.com/#organization" },
         "softwareHelp": "https://adafmt.com/#faq",
-        "releaseNotes": "https://adafmt.com/#downloads",
-        "dateModified": "2026-05-15"
+        "releaseNotes": "https://adafmt.com/#trial",
+        "dateModified": "2026-05-16"
       },
       {
         "@type": "FAQPage",
@@ -70,15 +70,7 @@
             "name": "How is Adafmt tested?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Adafmt has been validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code. Its largest test corpus contains more than 51,000 Ada files, and formatter validation emphasizes format success, idempotency, and stable output."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does Adafmt work with GNAT Ada projects?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Adafmt is designed for professional Ada workflows, including GNAT Ada teams, while formatting standard Ada source rather than depending on compiler-private syntax."
+              "text": "Adafmt has been validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code. The largest test corpus contains more than 51,000 Ada files."
             }
           },
           {
@@ -87,6 +79,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Adafmt is safety-oriented and uses automatic backup behavior to help preserve source content and reduce adoption risk for automated formatting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will Adafmt offer a trial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A 14-day trial is planned once licensing is enabled, with Linux amd64 and Linux arm64 as the initial release targets and an option to subscribe at the end of the trial period."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which platforms will Adafmt support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Adafmt v1.0.0 for Linux amd64 and Linux arm64 is planned by June 1, 2026. A Windows 11 release is expected shortly afterwards. macOS is a supported platform, but its release depends on resolving an issue with an external vendor library before packaging can be prepared."
             }
           }
         ]
@@ -102,9 +110,10 @@
     </a>
     <nav class="nav" aria-label="Primary navigation">
       <a href="#features">Features</a>
-      <a href="#validation">In the Lab</a>
+      <a href="#workflow">How it Works</a>
+      <a href="#lab">In the Lab</a>
+      <a href="#trial">Release</a>
       <a href="#faq">FAQ</a>
-      <a href="#downloads">Downloads</a>
     </nav>
   </header>
 
@@ -117,8 +126,8 @@
           Adafmt™ is a modern, high-performance, safety-oriented developer tool for configuration-driven style correction, syntax error detection, and repeatable professional formatting.
         </p>
         <div class="hero-actions" aria-label="Primary actions">
-          <a class="button primary" href="#downloads">Get release updates</a>
-          <a class="button secondary" href="#validation">See the lab</a>
+          <a class="button primary" href="#trial">See the release plan</a>
+          <a class="button secondary" href="#lab">See the lab</a>
         </div>
         <div class="terminal-card" aria-label="Example command">
           <span class="prompt">$</span> <code>adafmt format src/ --config adafmt.toml</code>
@@ -135,7 +144,7 @@
       <span>51,000+ Ada files in the largest test corpus</span>
       <span>Real-world Ada corpus</span>
       <span>Safe by default</span>
-      <span>Adaptive performance</span>
+      <span>v1.0.0 Linux release planned</span>
     </section>
 
     <section class="section-shell split-section" aria-labelledby="why-title">
@@ -181,10 +190,37 @@
       </article>
     </section>
 
-    <section id="validation" class="section-shell validation-section" aria-labelledby="validation-title">
+    <section id="workflow" class="section-shell performance-section" aria-labelledby="workflow-title">
+      <div class="section-heading">
+        <p class="eyebrow">How it Works</p>
+        <h2 id="workflow-title">Turn style preferences into repeatable formatting.</h2>
+        <p class="section-lede narrow">
+          Adafmt keeps the workflow familiar: choose formatting options, run the command, review safe output, and keep code reviews focused on engineering decisions.
+        </p>
+      </div>
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <span>01</span>
+          <h3>Choose a style</h3>
+          <p>Capture team preferences in a formatting configuration.</p>
+        </article>
+        <article class="workflow-card">
+          <span>02</span>
+          <h3>Run adafmt</h3>
+          <p>Format a file, package, branch, repository, or automated check.</p>
+        </article>
+        <article class="workflow-card">
+          <span>03</span>
+          <h3>Review safely</h3>
+          <p>Automatic backup behavior helps preserve source content.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="lab" class="section-shell validation-section" aria-labelledby="lab-title">
       <div class="validation-copy">
         <p class="eyebrow">In the Lab</p>
-        <h2 id="validation-title">Tested on standards suites, real Ada code, and project-scale corpora.</h2>
+        <h2 id="lab-title">Tested on standards suites, real Ada code, and project-scale corpora.</h2>
         <p>
           Adafmt maintains a high quality bar. It has been thoroughly validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code.
         </p>
@@ -203,29 +239,29 @@
         <span>Ada files in the largest test corpus</span>
       </article>
       <article class="metric-card">
-        <strong>4,810</strong>
-        <span>ACATS files exercised</span>
+        <strong>ACATS</strong>
+        <span>Relevant Ada 2012 conformance tests</span>
       </article>
       <article class="metric-card">
-        <strong>96.8%</strong>
-        <span>format success in recorded ACATS run</span>
+        <strong>Ada 2022</strong>
+        <span>Supplemental modern language feature tests</span>
       </article>
       <article class="metric-card">
-        <strong>90.2%</strong>
-        <span>idempotent in recorded ACATS run</span>
+        <strong>OSS</strong>
+        <span>Real-world open-source Ada code corpus</span>
       </article>
       <article class="metric-card muted">
-        <strong>TBD</strong>
-        <span>fresh performance numbers before launch</span>
+        <strong>S/M/L</strong>
+        <span>Fresh benchmark results coming soon</span>
       </article>
     </section>
 
     <section class="section-shell performance-section" aria-labelledby="performance-title">
       <div class="section-heading">
         <p class="eyebrow">Performance</p>
-        <h2 id="performance-title">Built for daily work and project-scale runs.</h2>
+        <h2 id="performance-title">Benchmarked for daily work and project-scale runs.</h2>
         <p class="section-lede narrow">
-          Adafmt is intended to handle common formatting scopes without forcing developers to change how they work.
+          Fresh benchmark numbers for small, medium, and large workloads are being prepared for publication.
         </p>
       </div>
       <div class="table-wrap">
@@ -234,24 +270,24 @@
             <tr>
               <th>Workload</th>
               <th>Example use</th>
-              <th>Message</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Small</td>
               <td>A file or focused change set</td>
-              <td>Fast formatting during normal edit cycles.</td>
+              <td>Fresh benchmark pending.</td>
             </tr>
             <tr>
               <td>Medium</td>
               <td>A package, component, or branch</td>
-              <td>Efficient batch formatting for team workflows.</td>
+              <td>Fresh benchmark pending.</td>
             </tr>
             <tr>
               <td>Large</td>
               <td>A full repository or test corpus</td>
-              <td>Adaptive processing for project-scale formatting.</td>
+              <td>Fresh benchmark pending.</td>
             </tr>
           </tbody>
         </table>
@@ -287,6 +323,23 @@
       </div>
     </section>
 
+    <section id="trial" class="section-shell cta-section" aria-labelledby="trial-title">
+      <div>
+        <p class="eyebrow">Release plan</p>
+        <h2 id="trial-title">Adafmt v1.0.0 begins on Linux.</h2>
+        <p class="section-lede narrow">
+          A v1.0.0 release of Adafmt for Linux amd64 and Linux arm64 is planned by June 1, 2026. A Windows 11 release is expected shortly afterwards. macOS is a supported platform, but the macOS release depends on resolving an issue with an external vendor library before packaging can be prepared.
+        </p>
+        <p class="section-lede narrow release-note">
+          Once licensing is enabled, 14-day trial builds will be available from this site with an option to subscribe at the end of the trial period.
+        </p>
+      </div>
+      <div class="download-actions" aria-label="Download actions">
+        <a class="button primary disabled" aria-disabled="true" href="#trial">Linux amd64 — v1.0.0 soon</a>
+        <a class="button secondary disabled" aria-disabled="true" href="#trial">Linux arm64 — v1.0.0 soon</a>
+      </div>
+    </section>
+
     <section id="faq" class="section-shell faq-section" aria-labelledby="faq-title">
       <div class="section-heading">
         <p class="eyebrow">FAQ</p>
@@ -317,28 +370,18 @@
           <p>Adafmt is safety-oriented and uses automatic backup behavior to help preserve source content and reduce adoption risk for automated formatting.</p>
         </article>
         <article class="faq-card status-card">
-          <h3>What is the current release status?</h3>
-          <p>Trial builds are planned. The first download targets are Linux x86_64 and Linux AArch64.</p>
+          <h3>Will Adafmt offer a trial?</h3>
+          <p>Yes. Once licensing is enabled, 14-day trial builds will be available from this site with an option to subscribe at the end of the trial period.</p>
+        </article>
+        <article class="faq-card status-card">
+          <h3>Which platforms will Adafmt support?</h3>
+          <p>Adafmt v1.0.0 for Linux amd64 and Linux arm64 is planned by June 1, 2026. A Windows 11 release is expected shortly afterwards. macOS is a supported platform, with release packaging pending resolution of an external vendor library issue.</p>
         </article>
       </div>
     </section>
 
-    <section id="downloads" class="section-shell cta-section" aria-labelledby="downloads-title">
-      <div>
-        <p class="eyebrow">Downloads</p>
-        <h2 id="downloads-title">Trial builds are coming soon.</h2>
-        <p class="section-lede narrow">
-          The initial trial release is planned for Linux x86_64 and Linux AArch64. Additional platforms are planned.
-        </p>
-      </div>
-      <div class="download-actions" aria-label="Download actions">
-        <a class="button primary disabled" aria-disabled="true" href="#downloads">Linux x86_64 — coming soon</a>
-        <a class="button secondary disabled" aria-disabled="true" href="#downloads">Linux AArch64 — coming soon</a>
-      </div>
-    </section>
-
     <section class="status-note" aria-label="Site status">
-      <p><strong>Launch status:</strong> Initial product introduction site. <strong>Last updated:</strong> May 15, 2026.</p>
+      <p><strong>Launch status:</strong> Initial product introduction site. <strong>Last updated:</strong> May 16, 2026.</p>
     </section>
   </main>
 
