@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="312" height="84" viewBox="0 0 312 84" role="img" aria-labelledby="title desc">
+  <title id="title">Adafmt logo</title>
+  <desc id="desc">A stylized A built from aligned code lines followed by the Adafmt wordmark.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="6" width="72" height="72" rx="20" fill="url(#g)"/>
+  <path d="M23 62 L40 22 L57 62" fill="none" stroke="#07111f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 49 H50" stroke="#07111f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M18 19 H34 M46 19 H63 M18 66 H64" stroke="#e0f2fe" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+  <text x="94" y="53" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="39" font-weight="800" letter-spacing="-1.8">Adafmt</text>
+  <text x="236" y="36" fill="#7dd3fc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="800">™</text>
+</svg>

@@ -1,0 +1,19 @@
+# Adafmt™
+
+Adafmt™ is a professional Ada formatter for development teams that want safe, repeatable, configuration-driven formatting across real Ada codebases. The command-line tool is `adafmt`.
+
+## Core positioning
+
+Adafmt is a modern, high-performance, safety-oriented developer tool for Ada formatting. It provides configuration-driven style correction, syntax error detection, automatic backup behavior, and repeatable professional formatting results.
+
+## In the Lab
+
+Adafmt has been validated against relevant ACATS Ada 2012 tests, supplemental Ada 2022 feature tests, and real-world open-source Ada code. The largest test corpus contains more than 51,000 Ada files. Formatter validation emphasizes format success, idempotency, and stable output after repeated formatting.
+
+## Current release status
+
+Trial builds are planned. Initial targets are Linux x86_64 and Linux AArch64.
+
+## Trademark
+
+Adafmt™ and adafmt™ are trademarks of A Bit of Help, Inc.
